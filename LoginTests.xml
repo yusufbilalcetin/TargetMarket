@@ -1,0 +1,24 @@
+<suite name="login" parallel="classes" thread-count="1">
+    <test name="Target Market ChromeTest">
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+            <class name="loginProcessTests.TM_LP_01"/>
+            <class name="loginProcessTests.TM_LP_02"/>
+            <class name="loginProcessTests.TM_LP_03"/>
+        </classes>
+    </test>
+<!--    <test name="Target Market EdgeTest">-->
+<!--        <parameter name="browserType" value="edge"/>-->
+<!--        <classes>-->
+<!--            <class name="loginProcessTests.TM_LP_01"/>-->
+<!--            <class name="loginProcessTests.TM_LP_02"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Target Market FirefoxTest">-->
+<!--        <parameter name="browserType" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="loginProcessTests.TM_LP_01"/>-->
+<!--            <class name="loginProcessTests.TM_LP_02"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
