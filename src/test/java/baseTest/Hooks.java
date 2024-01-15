@@ -23,4 +23,12 @@ public class Hooks {
 		Driver.closeDriver();
 	}
 
+	public void wait(int secs) {
+		try {
+			Thread.sleep(secs * 1000L);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 }
