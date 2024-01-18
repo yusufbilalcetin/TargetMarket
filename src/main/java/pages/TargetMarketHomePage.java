@@ -41,18 +41,26 @@ public class TargetMarketHomePage extends BasePage {
 	@FindBy(xpath = "//*[@class='modal-footer']/div/button")
 	private WebElement checkOutButton;
 
+	@FindBy(xpath = "//p[contains(text(),'Your cart is empty.')]")
+	private WebElement cartEmptyText;
+
+	@FindBy(xpath = "//button[contains(text(),'Close')]")
+	private WebElement cartEmptyCloseButton;
+
 	public String getWelcomeText() {
 		return welcomeText.getText();
 	}
 
-	public void  clickOnCategory(int index) {
+	public void clickOnCategory(int index) {
+		executeJavaScript("window.scroll(0,500)");
+		wait(3);
 		productCategorySlide.get(index - 1).click();
 	}
 
 	public WebElement findProduct(String product) {
 		for (WebElement card : productCards) {
-			String productName =card.findElement(By.tagName("h5")).getText();
-			if (productName.equalsIgnoreCase(product)){
+			String productName = card.findElement(By.tagName("h5")).getText();
+			if (productName.equalsIgnoreCase(product)) {
 				return card;
 			}
 		}
@@ -60,33 +68,29 @@ public class TargetMarketHomePage extends BasePage {
 	}
 
 	public String getProductName(String productName) {
-		return findProduct(productName)
-				.findElement(By.tagName("h5")).getText();
+		return findProduct(productName).findElement(By.tagName("h5")).getText();
 	}
 
 	public String getProductPrice(String productName) {
-		return findProduct(productName)
-				.findElement(By.className("text-danger")).getText();
+		return findProduct(productName).findElement(By.className("text-danger")).getText();
 	}
 
 	public String getDiscount(String productName) {
-		return findProduct(productName)
-				.findElement(By.xpath("//p[2]/span[2]")).getText();
+		return findProduct(productName).findElement(By.xpath(".//p[2]/span[2]")).getText();
 	}
 
 	public String getButtonText(String productName) {
-		return findProduct(productName)
-				.findElement(By.tagName("button")).getText();
+		return findProduct(productName).findElement(By.tagName("button")).getText();
 	}
 
 	public String getProductDescription(String productName) {
-		return findProduct(productName)
-				.findElement(By.className("card-text")).getText();
+		return findProduct(productName).findElement(By.className("card-text")).getText();
 	}
 
 	public void addToCart(String productName) {
-		findProduct(productName)
-				.findElement(By.tagName("button")).click();
+		executeJavaScript("window.scroll(0,1300)");
+		wait(3);
+		findProduct(productName).findElement(By.tagName("button")).click();
 	}
 
 	public void clickOnCartButton() {
@@ -98,39 +102,39 @@ public class TargetMarketHomePage extends BasePage {
 	}
 
 	public String getProductNameOnTheCart(int index) {
-		return productsOnTheCart.get(index - 1)
-				.findElement(By.tagName("h3")).getText();
+		return productsOnTheCart.get(index - 1).findElement(By.tagName("h3")).getText();
 	}
 
 	public String getPerProductPriceOnTheCart(int index) {
-		return productsOnTheCart.get(index - 1)
-				.findElement(By.xpath(".//div/div/p[1]")).getText();
+		return productsOnTheCart.get(index - 1).findElement(By.xpath(".//div/div/p[1]")).getText();
 	}
 
 	public String getTotalProductPriceOnTheCart(int index) {
-		return productsOnTheCart.get(index - 1)
-				.findElement(By.xpath(".//div/div/p[2]")).getText();
+		return productsOnTheCart.get(index - 1).findElement(By.xpath(".//div/div/p[2]")).getText();
 	}
 
 	public void clickOnIncreaseButtonOnCart(int index, int times) {
 		for (int i = 0; i < times; i++) {
-			productsOnTheCart.get(index - 1)
-					.findElement(By.xpath(".//button[contains(text(), '+')]"))
-					.click();
+			productsOnTheCart.get(index - 1).findElement(By.xpath(".//button[contains(text(), '+')]")).click();
 		}
 	}
 
 	public void clickOnDecreaseButtonOnCart(int index, int times) {
 		for (int i = 0; i < times; i++) {
-			productsOnTheCart.get(index - 1)
-					.findElement(By.xpath(".//button[contains(text(), '-')]"))
-					.click();
+			productsOnTheCart.get(index - 1).findElement(By.xpath(".//button[contains(text(), '-')]")).click();
 		}
 	}
 
 	public String getProductNumberOnTheCart(int index) {
-		return productsOnTheCart.get(index - 1)
-				.findElement(By.tagName("span")).getText();
+		return productsOnTheCart.get(index - 1).findElement(By.tagName("span")).getText();
+	}
+
+	public String getCartEmptyText() {
+		return cartEmptyText.getText();
+	}
+
+	public void clickCartEmptyCloseButton() {
+		cartEmptyCloseButton.click();
 	}
 
 }
