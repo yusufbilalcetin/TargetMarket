@@ -1,15 +1,15 @@
 package baseTest;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 import utils.Driver;
 import utils.Pages;
 
 public class Hooks {
 
 	protected static Pages pages;
+
+	protected SoftAssert softAssert = new SoftAssert();
 
 	@BeforeMethod
 	@Parameters("browserType")
@@ -26,7 +26,8 @@ public class Hooks {
 	public void wait(int secs) {
 		try {
 			Thread.sleep(secs * 1000L);
-		} catch (InterruptedException e) {
+		}
+		catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}
 	}
