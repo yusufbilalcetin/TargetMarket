@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
@@ -42,11 +41,19 @@ public class TargetMarketHomePage extends BasePage {
 	@FindBy(xpath = "//*[@class='modal-footer']/div/button")
 	private WebElement checkOutButton;
 
+	@FindBy(xpath = "//p[contains(text(),'Your cart is empty.')]")
+	private WebElement cartEmptyText;
+
+	@FindBy(xpath = "//button[contains(text(),'Close')]")
+	private WebElement cartEmptyCloseButton;
+
 	public String getWelcomeText() {
 		return welcomeText.getText();
 	}
 
 	public void clickOnCategory(int index) {
+		executeJavaScript("window.scroll(0,500)");
+		wait(3);
 		productCategorySlide.get(index - 1).click();
 	}
 
@@ -81,11 +88,9 @@ public class TargetMarketHomePage extends BasePage {
 	}
 
 	public void addToCart(String productName) {
+		executeJavaScript("window.scroll(0,1300)");
+		wait(3);
 		findProduct(productName).findElement(By.tagName("button")).click();
-	}
-
-	public boolean isAddToCartButtonVisible(String productName) {
-		return findProduct(productName).findElement(By.tagName("button")).isDisplayed();
 	}
 
 	public void clickOnCartButton() {
@@ -124,8 +129,12 @@ public class TargetMarketHomePage extends BasePage {
 		return productsOnTheCart.get(index - 1).findElement(By.tagName("span")).getText();
 	}
 
-	public boolean isProductPictureLoadedProperly(String productName) {
-		return findProduct(productName).findElement(By.xpath("preceding-sibling::*")).isDisplayed();
+	public String getCartEmptyText() {
+		return cartEmptyText.getText();
+	}
+
+	public void clickCartEmptyCloseButton() {
+		cartEmptyCloseButton.click();
 	}
 
 }

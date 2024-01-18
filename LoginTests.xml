@@ -1,30 +1,27 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Login Suite with Extent Reports" parallel="classes" thread-count="1">
-    <!--<listeners>
-        <listener class-name="listeners.ExtentReportListener"/>
-    </listeners>-->
-    <test name="Target Market Login Process Chrome Tests">
+<suite name="login" parallel="classes" thread-count="1">
+    <test name="Target Market ChromeTest">
         <parameter name="browserType" value="chrome"/>
         <classes>
-            <!--<class name="loginProcessTests.TM_LP_01"/>
-            <class name="loginProcessTests.TM_LP_02"/>-->
-            <class name="loginProcessTests.TM_LP_03"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_01"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_02"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_03"/>
         </classes>
     </test>
-    <!--<test name="Target Market Login Process Edge Tests">
-        <parameter name="browserType" value="edge"/>
-        <classes>
-            <class name="loginProcessTests.TM_LP_01"/>
-            <class name="loginProcessTests.TM_LP_02"/>
-            <class name="loginProcessTests.TM_LP_03"/>
-        </classes>
-    </test>
-    <test name="Target Market Login Process Firefox Tests">
-        <parameter name="browserType" value="firefox"/>
-        <classes>
-            <class name="loginProcessTests.TM_LP_01"/>
-            <class name="loginProcessTests.TM_LP_02"/>
-            <class name="loginProcessTests.TM_LP_03"/>
-        </classes>
-    </test>-->
+<!--    <test name="Target Market EdgeTest">-->
+<!--        <parameter name="browserType" value="edge"/>-->
+<!--        <classes>-->
+<!--            <class name="loginProcessTests.TM_LP_01"/>-->
+<!--            <class name="loginProcessTests.TM_LP_02"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Target Market FirefoxTest">-->
+<!--        <parameter name="browserType" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="loginProcessTests.TM_LP_01"/>-->
+<!--            <class name="loginProcessTests.TM_LP_02"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

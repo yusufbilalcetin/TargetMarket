@@ -16,8 +16,10 @@ import pages.TargetMarketHomePage;
 // 9-) Verify that the amount is "2" and the total price is correct.
 public class TM_LA_01 extends Hooks {
 
+	SoftAssert softAssert = new SoftAssert();
+
 	@Test
-	void testLaptopsORderingOneProduct() {
+	void testLaptops() {
 
 		// 1-) Navigate to ordering page.
 		pages.getInarAcademyHomePage().clickOnTargetMarketLink();
