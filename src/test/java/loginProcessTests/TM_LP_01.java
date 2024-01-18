@@ -14,27 +14,27 @@ import static org.testng.Assert.assertEquals;
 
 public class TM_LP_01 extends Hooks {
 
-	//1- Create a DataProvider method to provide different user credentials for the test
+	// 1- Create a DataProvider method to provide different user credentials for the test
 	@DataProvider(name = "userCredentials")
 	public String[][] getUserCredentials() {
 		return new String[][] { { "standard_user", "secret_password" }, { "problem_user", "secret_password" },
 				{ "performance_glitch_user", "secret_password" } };
 	}
 
-	//2- Create Test method using the DataProvider to run multiple test cases with different users
+	// 2- Create Test method using the DataProvider to run multiple test cases with
+	// different users
 	@Test(dataProvider = "userCredentials")
 	public void testLoginProcessWithDifferentUsers(String username, String password) {
-		//3- Click on the Target Market link on the Inar Academy home page
+		// 3- Click on the Target Market link on the Inar Academy home page
 		pages.getInarAcademyHomePage().clickOnTargetMarketLink();
 
-		//4- Login using the provided username and password(Login method calls clickLogin())
+		// 4- Login using the provided username and password(Login method calls
+		// clickLogin())
 		pages.getTargetMarketLoginPage().login(username, password);
 
-		//5- Verify the welcome text on the Target Market home page after login
+		// 5- Verify the welcome text on the Target Market home page after login
 		String expectedWelcomeText = "Welcome to the Target Market, " + username + "!";
 		assertEquals(expectedWelcomeText, pages.getTargetMarketHomePage().getWelcomeText(), "Wrong welcome text");
 	}
-
-
 
 }
