@@ -4,7 +4,6 @@ import baseTest.Hooks;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
-import utils.BrowserUtils;
 
 // 1-) Navigate to ordering page.
 // 2-) Click on Laptops caregory.
@@ -29,11 +28,9 @@ public class TM_SM_03 extends Hooks {
         TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
 
         // 2-) Click on Laptops category.
-        BrowserUtils.scrollDownWithPageDown();
         homePage.clickOnCategory(2);
 
         // 3-) Add iPhone X and OPPOF19 to cart.
-        BrowserUtils.scrollDownWithPageDown();
         homePage.addToCart("iPhone X");
         homePage.addToCart("OPPOF19");
 

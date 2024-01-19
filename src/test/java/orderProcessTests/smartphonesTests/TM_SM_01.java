@@ -4,7 +4,7 @@ import baseTest.Hooks;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
-import utils.BrowserUtils;
+
 
 // 1-) Navigate to ordering page.
 // 2-) Click on Smartphones.
@@ -27,12 +27,10 @@ public class TM_SM_01 extends Hooks {
 
         // 2-) Click on Smartphones category.
         wait(5);
-        BrowserUtils.scrollDownWithPageDown();
         homePage.clickOnCategory(2);
 
         // 3-) Add MacBook Pro to cart.
         wait(5);
-        BrowserUtils.scrollDownWithPageDown();
         homePage.addToCart("iPhone 9");
 
         // 4-) Verify that button in iPhone 9 card is turned to "Added to Cart".

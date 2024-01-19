@@ -2,9 +2,7 @@ package orderProcessTests.smartphonesTests;
 
 import baseTest.Hooks;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import pages.TargetMarketHomePage;
-import utils.BrowserUtils;
+
 
 // 1-) Navigate to ordering page.
 // 2-) Click on Smartphones category.
@@ -17,7 +15,6 @@ import utils.BrowserUtils;
 // 9-) Verify that button in "OPPOF19" card is turned to "Added to Cart".
 
 public class TM_SM_02 extends Hooks {
-    SoftAssert softAssert = new SoftAssert();
 
 
     void goToHomePageAndChooseOPPOF19() {
@@ -25,7 +22,7 @@ public class TM_SM_02 extends Hooks {
         pages.getInarAcademyHomePage().clickOnTargetMarketLink();
         pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
         wait(4);
-        BrowserUtils.scrollDownWithPageDown();
+
         pages.getTargetMarketHomePage().clickOnCategory(2);
 
     }
@@ -66,7 +63,6 @@ public class TM_SM_02 extends Hooks {
     void checkOPPOF19AddCartFunction() {
         goToHomePageAndChooseOPPOF19();
         // 8-) Add OPPOF19. to cart.
-        BrowserUtils.scrollDownWithPageDown();
         pages.getTargetMarketHomePage().addToCart("OPPOF19");
 
         // 9-) Verify that button in OPPOF19. card is turned to "Added to Cart".

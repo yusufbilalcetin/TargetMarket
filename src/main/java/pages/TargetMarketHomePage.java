@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class TargetMarketHomePage extends BasePage {
@@ -46,6 +49,39 @@ public class TargetMarketHomePage extends BasePage {
 
 	@FindBy(xpath = "//button[contains(text(),'Close')]")
 	private WebElement cartEmptyCloseButton;
+
+	@FindBy(id = "sortType")
+	private WebElement sortType;
+
+	@FindBy(xpath = "//*[@id=\"sortType\"]/option[1]")
+	private WebElement sortNone;
+
+	@FindBy(xpath = "//*[@id=\"sortType\"]/option[2]")
+	private WebElement sortAtoZ;
+
+	@FindBy(xpath = "//*[@id=\"sortType\"]/option[3]")
+	private WebElement sortZtoA;
+
+	@FindBy(xpath = "//*[@id=\"sortType\"]/option[4]")
+	private WebElement sortHighestPrice;
+
+	@FindBy(xpath = "//*[@id=\"sortType\"]/option[5]")
+	private WebElement sortLowestPrice;
+
+	@FindBy(xpath = "//p[@class='fs-4']")
+	private WebElement cartEmptyMessage;
+
+	@FindBy(xpath = "//*[@id='market-items-target']/div")
+	private List<WebElement> items;
+
+	@FindBy(xpath = "//*[@id=\"splide643-list\"]")
+	private WebElement splideList;
+
+	@FindBy(css = ".card-title")
+	private List<WebElement> productNames;
+
+	@FindBy(xpath = "//strong/i")
+	private List<WebElement> productPrices;
 
 	public String getWelcomeText() {
 		return welcomeText.getText();
@@ -143,6 +179,94 @@ public class TargetMarketHomePage extends BasePage {
 
 	public boolean isAddToCartButtonVisible(String productName) {
 		return findProduct(productName).findElement(By.tagName("button")).isDisplayed();
+	}
+
+	public void clickOnSortType() {
+		sortType.click();
+	}
+
+	public void selectByAtoZ() {
+		scrollDownWithPageDown();
+		sortType.click();
+		sortAtoZ.click();
+	}
+
+	public void selectByZtoA() {
+		sortType.click();
+		sortZtoA.click();
+	}
+
+	public void selectByHighestPrice() {
+		sortType.click();
+		sortHighestPrice.click();
+	}
+
+	public void selectByLowestPrice() {
+		sortType.click();
+		sortLowestPrice.click();
+	}
+
+	public boolean isSortedAtoZ() {
+		List<String> names = new ArrayList<>();
+		for (WebElement productName : productNames) {
+			names.add(productName.getText().toLowerCase().replace('ı', 'i'));
+		}
+		return compareListEquality(names,false,false);
+	}
+
+	public boolean isSortedZtoA() {
+		List<String> names = new ArrayList<>();
+		for (WebElement productName : productNames) {
+			names.add(productName.getText().toLowerCase().replace('ı', 'i'));
+		}
+		return compareListEquality(names,true,false);
+	}
+
+
+	public boolean isSortedHighToLow() {
+		List<String> prices = new ArrayList<>();
+		for (WebElement productPrice : productPrices) {
+			prices.add(productPrice.getText().substring(1));
+		}
+		return compareListEquality(prices,true,true);
+
+	}
+
+	public boolean isSortedLowToHigh() {
+		List<String> prices = new ArrayList<>();
+		for (WebElement productPrice : productPrices) {
+			prices.add(productPrice.getText().substring(1));
+		}
+		return compareListEquality(prices,false,true);
+
+	}
+	public boolean compareListEquality(List<String> list,boolean isReverse,boolean isInteger){
+		List<String> newList= new ArrayList<>(list);
+		if(isInteger) Collections.sort(list, Comparator.comparingInt(Integer::parseInt));
+		else Collections.sort(newList);
+		if(isReverse) Collections.reverse(newList);
+		return list.equals(newList);
+	}
+
+	public boolean areItemsListedCategorically(int index) {
+		List<Integer> numberList = new ArrayList<>();
+		if (index == 1) {
+			for (int i = 1; i <= 50; i++) {
+				numberList.add(i);
+			}
+		} else {
+			for (int i = 1; i <= 5; i++) {
+				if (index == 2 || index == 3)
+					numberList.add(i + 5 * (index - 2));
+				else
+					numberList.add(i + 5 * (index - 1));
+			}
+		}
+		List<Integer> list = new ArrayList<>();
+		for (WebElement item : items) {
+			list.add(Integer.parseInt(item.getAttribute("id").substring(20)));
+		}
+		return numberList.equals(list);
 	}
 
 }

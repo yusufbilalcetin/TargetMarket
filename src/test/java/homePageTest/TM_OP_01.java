@@ -4,7 +4,6 @@ import baseTest.Hooks;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
-import utils.BrowserUtils;
 
 // 1-) Navigate to ordering page.
 // 2-) Click on Sorting Types and then "A-Z"
@@ -24,7 +23,6 @@ public class TM_OP_01 extends Hooks {
         pages.getInarAcademyHomePage().clickOnTargetMarketLink();
         pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
         TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
-        BrowserUtils.scrollDownWithPageDown();
 
         //2-) Click on Sorting Types and then "A-Z"
         homePage.selectByAtoZ();
