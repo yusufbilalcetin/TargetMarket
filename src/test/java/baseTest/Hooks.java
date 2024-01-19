@@ -1,15 +1,15 @@
 package baseTest;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 import utils.Driver;
 import utils.Pages;
 
 public class Hooks {
 
 	protected static Pages pages;
+
+	protected SoftAssert softAssert = new SoftAssert();
 
 
 	@BeforeMethod

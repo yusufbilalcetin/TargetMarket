@@ -29,13 +29,9 @@ public class TM_LA_01 extends Hooks {
 		TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
 
 		// 2-) Click on Laptops category.
-		wait(5);
-		BrowserUtils.scrollDownWithPageDown();
 		homePage.clickOnCategory(3);
 
 		// 3-) Add MacBook Pro to cart.
-		wait(5);
-		BrowserUtils.scrollDownWithPageDown();
 		homePage.addToCart("MacBook Pro");
 
 		// 4-) Verify that button in MacBook Pro card is turned to "Added to Cart".
