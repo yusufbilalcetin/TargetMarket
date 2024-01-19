@@ -7,6 +7,12 @@
             <class name="loginProcessTests.TM_LP_02"/>
             <class name="loginProcessTests.TM_LP_03"/>
             <class name="loginProcessTests.TM_LP_04"/>
+            <class name="homePageTest.TM_OP_01"/>
+            <class name="homePageTest.TM_OP_02"/>
+            <class name="homePageTest.TM_OP_03"/>
+            <class name="orderProcessTests.furnitureTests.TM_FU_01"/>
+            <class name="orderProcessTests.furnitureTests.TM_FU_02"/>
+            <class name="orderProcessTests.furnitureTests.TM_FU_03"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
@@ -19,6 +25,19 @@
             <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
             <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
             <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_01"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_02"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_03"/>
+            <class name="orderProcessTests.TopsTests.TM_TO_01"/>
+            <class name="orderProcessTests.TopsTests.TM_TO_02"/>
+            <class name="orderProcessTests.TopsTests.TM_TO_03"/>
+            <class name="orderProcessTests.womenDressTests.TM_WD_01"/>
+            <class name="orderProcessTests.womenDressTests.TM_WD_02"/>
+            <class name="orderProcessTests.womenDressTests.TM_WD_03"/>
+            <class name="orderProcessTests.womenShoesTests.TM_WS_01"/>
+            <class name="orderProcessTests.womenShoesTests.TM_WS_02"/>
+            <class name="orderProcessTests.womenShoesTests.TM_WS_03"/>
+
         </classes>
     </test>
     <!--<test name="Target Market All Tests - Edge">
@@ -28,6 +47,12 @@
             <class name="loginProcessTests.TM_LP_02"/>
             <class name="loginProcessTests.TM_LP_03"/>
             <class name="loginProcessTests.TM_LP_04"/>
+            <class name="homePageTest.TM_OP_01"/>
+            <class name="homePageTest.TM_OP_02"/>
+            <class name="homePageTest.TM_OP_03"/>
+            <class name="orderProcessTests.furnitureTests.TM_FU_01"/>
+            <class name="orderProcessTests.furnitureTests.TM_FU_02"/>
+            <class name="orderProcessTests.furnitureTests.TM_FU_03"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
@@ -40,6 +65,18 @@
             <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
             <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
             <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_01"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_02"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_03"/>
+            <class name="orderProcessTests.TopsTests.TM_TO_01"/>
+            <class name="orderProcessTests.TopsTests.TM_TO_02"/>
+            <class name="orderProcessTests.TopsTests.TM_TO_03"/>
+            <class name="orderProcessTests.womenDressTests.TM_WD_01"/>
+            <class name="orderProcessTests.womenDressTests.TM_WD_02"/>
+            <class name="orderProcessTests.womenDressTests.TM_WD_03"/>
+            <class name="orderProcessTests.womenShoesTests.TM_WS_01"/>
+            <class name="orderProcessTests.womenShoesTests.TM_WS_02"/>
+            <class name="orderProcessTests.womenShoesTests.TM_WS_03"/>
         </classes>
     </test>
     <test name="Target Market All Tests - Firefox">
@@ -49,6 +86,12 @@
             <class name="loginProcessTests.TM_LP_02"/>
             <class name="loginProcessTests.TM_LP_03"/>
             <class name="loginProcessTests.TM_LP_04"/>
+            <class name="homePageTest.TM_OP_01"/>
+            <class name="homePageTest.TM_OP_02"/>
+            <class name="homePageTest.TM_OP_03"/>
+            <class name="orderProcessTests.furnitureTests.TM_FU_01"/>
+            <class name="orderProcessTests.furnitureTests.TM_FU_02"/>
+            <class name="orderProcessTests.furnitureTests.TM_FU_03"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
@@ -61,6 +104,18 @@
             <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
             <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
             <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_01"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_02"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_03"/>
+            <class name="orderProcessTests.TopsTests.TM_TO_01"/>
+            <class name="orderProcessTests.TopsTests.TM_TO_02"/>
+            <class name="orderProcessTests.TopsTests.TM_TO_03"/>
+            <class name="orderProcessTests.womenDressTests.TM_WD_01"/>
+            <class name="orderProcessTests.womenDressTests.TM_WD_02"/>
+            <class name="orderProcessTests.womenDressTests.TM_WD_03"/>
+            <class name="orderProcessTests.womenShoesTests.TM_WS_01"/>
+            <class name="orderProcessTests.womenShoesTests.TM_WS_02"/>
+            <class name="orderProcessTests.womenShoesTests.TM_WS_03"/>
         </classes>
     </test>-->
 </suite>

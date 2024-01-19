@@ -14,23 +14,17 @@
     <!--<test name="Target Market Order Process Edge Tests">
         <parameter name="browserType" value="edge"/>
         <classes>
-            <class name="orderProcessTests.laptopTests.TM_LA_01"/>
-            <class name="orderProcessTests.laptopTests.TM_LA_02"/>
-            <class name="orderProcessTests.laptopTests.TM_LA_03"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_01"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_02"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_03"/>
         </classes>
     </test>
     <test name="Target Market Order Process Firefox Tests">
         <parameter name="browserType" value="firefox"/>
         <classes>
-            <class name="orderProcessTests.laptopTests.TM_LA_01"/>
-            <class name="orderProcessTests.laptopTests.TM_LA_02"/>
-            <class name="orderProcessTests.laptopTests.TM_LA_03"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_01"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_02"/>
+            <class name="orderProcessTests.smartphonesTests.TM_SM_03"/>
         </classes>
     </test>-->
 </suite>

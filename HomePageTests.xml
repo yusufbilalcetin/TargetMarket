@@ -14,23 +14,17 @@
     <!--<test name="Target Market Order Process Edge Tests">
         <parameter name="browserType" value="edge"/>
         <classes>
-            <class name="orderProcessTests.womenDressTests.TM_WD_01"/>
-            <class name="orderProcessTests.womenDressTests.TM_WD_02"/>
-            <class name="orderProcessTests.womenDressTests.TM_WD_03"/>
-            <class name="orderProcessTests.womenShoesTests.TM_WS_01"/>
-            <class name="orderProcessTests.womenShoesTests.TM_WS_02"/>
-            <class name="orderProcessTests.womenShoesTests.TM_WS_03"/>
+            <class name="homePageTest.TM_OP_01"/>
+            <class name="homePageTest.TM_OP_02"/>
+            <class name="homePageTest.TM_OP_03"/>
         </classes>
     </test>
     <test name="Target Market Order Process Firefox Tests">
         <parameter name="browserType" value="firefox"/>
         <classes>
-            <class name="orderProcessTests.womenDressTests.TM_WD_01"/>
-            <class name="orderProcessTests.womenDressTests.TM_WD_02"/>
-            <class name="orderProcessTests.womenDressTests.TM_WD_03"/>
-            <class name="orderProcessTests.womenShoesTests.TM_WS_01"/>
-            <class name="orderProcessTests.womenShoesTests.TM_WS_02"/>
-            <class name="orderProcessTests.womenShoesTests.TM_WS_03"/>
+            <class name="homePageTest.TM_OP_01"/>
+            <class name="homePageTest.TM_OP_02"/>
+            <class name="homePageTest.TM_OP_03"/>
         </classes>
     </test>-->
 </suite>
