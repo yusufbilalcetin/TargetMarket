@@ -273,4 +273,9 @@ public class TargetMarketHomePage extends BasePage {
 		return cartEmptyMessage.getText();
 	}
 
+	public void scrollCategoriesToLeft() {
+		actions.moveToElement(productCategorySlide.get(4)).clickAndHold()
+				.moveToElement(productCategorySlide.get(1)).release().build().perform();
+	}
+
 }

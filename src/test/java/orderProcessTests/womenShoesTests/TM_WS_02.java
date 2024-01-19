@@ -28,6 +28,7 @@ public class TM_WS_02 extends Hooks {
         TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
 
         // 2-) Click on Woman Shoes category.
+        homePage.scrollCategoriesToLeft();
         homePage.clickOnCategory(10);
 
         //3-) Add Chappals & Shoe Ladies Metallic.

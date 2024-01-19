@@ -22,6 +22,7 @@ public class TM_WD_01 extends Hooks {
         TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
 
         // 2-) Click on Woman Dresses category.
+        homePage.scrollCategoriesToLeft();
         homePage.clickOnCategory(9);
 
         //3-) Add Ladies Multicolored Dresses.

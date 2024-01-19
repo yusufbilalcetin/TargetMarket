@@ -30,6 +30,7 @@ public class TM_WS_01 extends Hooks {
         TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
 
         // 2-) Click on Woman Shoes category.
+        homePage.scrollCategoriesToLeft();
         homePage.clickOnCategory(10);
 
         //3-) Add to Cart Sneaker Shoes.
