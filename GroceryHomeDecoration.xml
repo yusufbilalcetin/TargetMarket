@@ -9,31 +9,31 @@
             <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
             <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
-            <!--<class name="orderProcessTests.homeDecorationTests.TM_HD_01"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_01"/>
             <class name="orderProcessTests.homeDecorationTests.TM_HD_02"/>
-            <class name="orderProcessTests.homeDecorationTests.TM_HD_03"/>-->
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_03"/>
         </classes>
     </test>
     <!--<test name="Target Market Order Process Edge Tests">
         <parameter name="browserType" value="edge"/>
         <classes>
-            <class name="orderProcessTests.laptopTests.TM_LA_01"/>
-            <class name="orderProcessTests.laptopTests.TM_LA_02"/>
-            <class name="orderProcessTests.laptopTests.TM_LA_03"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_01"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_02"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_03"/>
         </classes>
     </test>
     <test name="Target Market Order Process Firefox Tests">
         <parameter name="browserType" value="firefox"/>
         <classes>
-            <class name="orderProcessTests.laptopTests.TM_LA_01"/>
-            <class name="orderProcessTests.laptopTests.TM_LA_02"/>
-            <class name="orderProcessTests.laptopTests.TM_LA_03"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
-            <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_01"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_02"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_03"/>
         </classes>
     </test>-->
 </suite>

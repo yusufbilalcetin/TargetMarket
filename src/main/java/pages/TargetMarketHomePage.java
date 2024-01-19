@@ -137,4 +137,12 @@ public class TargetMarketHomePage extends BasePage {
 		cartEmptyCloseButton.click();
 	}
 
+	public boolean isProductPictureLoadedProperly(String productName) {
+		return findProduct(productName).findElement(By.xpath("preceding-sibling::*")).isDisplayed();
+	}
+
+	public boolean isAddToCartButtonVisible(String productName) {
+		return findProduct(productName).findElement(By.tagName("button")).isDisplayed();
+	}
+
 }

@@ -6,7 +6,19 @@
             <class name="loginProcessTests.TM_LP_01"/>
             <class name="loginProcessTests.TM_LP_02"/>
             <class name="loginProcessTests.TM_LP_03"/>
+            <class name="loginProcessTests.TM_LP_04"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_01"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_02"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_03"/>
             <class name="orderProcessTests.laptopTests.TM_LA_01"/>
+            <class name="orderProcessTests.laptopTests.TM_LA_02"/>
+            <class name="orderProcessTests.laptopTests.TM_LA_03"/>
+            <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
+            <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
+            <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
         </classes>
     </test>
     <!--<test name="Target Market All Tests - Edge">
@@ -15,7 +27,19 @@
             <class name="loginProcessTests.TM_LP_01"/>
             <class name="loginProcessTests.TM_LP_02"/>
             <class name="loginProcessTests.TM_LP_03"/>
+            <class name="loginProcessTests.TM_LP_04"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_01"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_02"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_03"/>
             <class name="orderProcessTests.laptopTests.TM_LA_01"/>
+            <class name="orderProcessTests.laptopTests.TM_LA_02"/>
+            <class name="orderProcessTests.laptopTests.TM_LA_03"/>
+            <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
+            <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
+            <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
         </classes>
     </test>
     <test name="Target Market All Tests - Firefox">
@@ -24,7 +48,19 @@
             <class name="loginProcessTests.TM_LP_01"/>
             <class name="loginProcessTests.TM_LP_02"/>
             <class name="loginProcessTests.TM_LP_03"/>
+            <class name="loginProcessTests.TM_LP_04"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_01"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_02"/>
+            <class name="orderProcessTests.groceriesTests.TM_GR_03"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_01"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_02"/>
+            <class name="orderProcessTests.homeDecorationTests.TM_HD_03"/>
             <class name="orderProcessTests.laptopTests.TM_LA_01"/>
+            <class name="orderProcessTests.laptopTests.TM_LA_02"/>
+            <class name="orderProcessTests.laptopTests.TM_LA_03"/>
+            <class name="orderProcessTests.skinCareTests.TM_SC_01"/>
+            <class name="orderProcessTests.skinCareTests.TM_SC_02"/>
+            <class name="orderProcessTests.skinCareTests.TM_SC_03"/>
         </classes>
     </test>-->
 </suite>

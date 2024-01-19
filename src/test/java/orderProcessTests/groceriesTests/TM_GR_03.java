@@ -4,7 +4,7 @@ import baseTest.Hooks;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
-import utils.JSUtils;
+
 // 1-) Navigate to ordering page.
 // 2-) Click on Groceries  category.
 // 3-) Add Orange Essence Food Flavou and cereals muesli fruit nuts to cart.

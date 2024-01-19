@@ -41,11 +41,13 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-       <!-- <dependency>
+        <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.1.1</version>
-        </dependency>-->
+        </dependency>
+
+
 
     </dependencies>
 

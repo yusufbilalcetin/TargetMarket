@@ -4,7 +4,7 @@ import baseTest.Hooks;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
-import utils.JSUtils;
+
 // 1-) Navigate to ordering page.
 // 2-) Click on Home Decoration category.
 // 3-) Add Plant Hanger For Home to cart.
