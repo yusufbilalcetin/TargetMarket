@@ -11,6 +11,7 @@ public class Hooks {
 
 	protected SoftAssert softAssert = new SoftAssert();
 
+
 	@BeforeMethod
 	@Parameters("browserType")
 	public static void setUpTestEnvironment(@Optional("chrome") String browserType) {
