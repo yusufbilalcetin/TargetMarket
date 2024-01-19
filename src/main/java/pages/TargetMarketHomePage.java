@@ -124,8 +124,8 @@ public class TargetMarketHomePage extends BasePage {
 	}
 
 	public void addToCart(String productName) {
-		executeJavaScript("window.scroll(0,1300)");
-		wait(3);
+		executeJavaScript("window.scroll(0,1000)");
+		wait(4);
 		findProduct(productName).findElement(By.tagName("button")).click();
 	}
 
