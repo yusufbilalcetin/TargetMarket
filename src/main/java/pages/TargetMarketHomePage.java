@@ -274,6 +274,7 @@ public class TargetMarketHomePage extends BasePage {
 	}
 
 	public void scrollCategoriesToLeft() {
+		scrollDownWithPageDown();
 		actions.moveToElement(productCategorySlide.get(4)).clickAndHold()
 				.moveToElement(productCategorySlide.get(1)).release().build().perform();
 	}
