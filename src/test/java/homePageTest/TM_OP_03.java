@@ -4,7 +4,6 @@ import baseTest.Hooks;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
-import utils.BrowserUtils;
 
 // 1-) Navigate to ordering page.
 // 2-) Click on "Smartphones"
@@ -25,7 +24,6 @@ public class TM_OP_03 extends Hooks {
         wait(3);
         TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
         wait(5);
-        BrowserUtils.scrollDownWithPageDown();
         for (int i = 1; i <10 ; i++) {
             homePage.clickOnCategory(i);
             softAssert.assertTrue(homePage.areItemsListedCategorically(i),"Category(index"+i+") is listed non-categorically");

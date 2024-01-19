@@ -269,4 +269,8 @@ public class TargetMarketHomePage extends BasePage {
 		return numberList.equals(list);
 	}
 
+	public String getCartEmptyMessage() {
+		return cartEmptyMessage.getText();
+	}
+
 }
