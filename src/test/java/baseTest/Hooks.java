@@ -11,6 +11,7 @@ public class Hooks {
 
 	protected static Pages pages;
 
+
 	@BeforeMethod
 	@Parameters("browserType")
 	public static void setUpTestEnvironment(@Optional("chrome") String browserType) {
@@ -26,7 +27,8 @@ public class Hooks {
 	public void wait(int secs) {
 		try {
 			Thread.sleep(secs * 1000L);
-		} catch (InterruptedException e) {
+		}
+		catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}
 	}
