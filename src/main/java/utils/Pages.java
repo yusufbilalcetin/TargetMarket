@@ -2,6 +2,7 @@ package utils;
 
 import pages.InarAcademyHomePage;
 import pages.TargetMarketHomePage;
+import pages.TargetMarketLogOutPage;
 import pages.TargetMarketLoginPage;
 
 public class Pages {
@@ -12,10 +13,16 @@ public class Pages {
 
 	private TargetMarketHomePage targetMarketHomePage;
 
+	private TargetMarketLogOutPage targetMarketLogOutPage;
+
+
+
+
 	public Pages() {
 		inarAcademyHomePage = new InarAcademyHomePage();
 		targetMarketLoginPage = new TargetMarketLoginPage();
 		targetMarketHomePage = new TargetMarketHomePage();
+		targetMarketLogOutPage = new TargetMarketLogOutPage();
 	}
 
 	public InarAcademyHomePage getInarAcademyHomePage() {
@@ -29,5 +36,7 @@ public class Pages {
 	public TargetMarketHomePage getTargetMarketHomePage() {
 		return targetMarketHomePage;
 	}
+
+	public TargetMarketLogOutPage getTargetMarketLogOutPage() {return targetMarketLogOutPage;}
 
 }

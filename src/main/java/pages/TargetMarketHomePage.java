@@ -83,6 +83,9 @@ public class TargetMarketHomePage extends BasePage {
 	@FindBy(xpath = "//strong/i")
 	private List<WebElement> productPrices;
 
+	@FindBy(xpath = "//button[contains(text(),'Go to Checkout')]")
+	private WebElement goToCheckOutButton;
+
 	public String getWelcomeText() {
 		return welcomeText.getText();
 	}
@@ -277,6 +280,13 @@ public class TargetMarketHomePage extends BasePage {
 		scrollDownWithPageDown();
 		actions.moveToElement(productCategorySlide.get(4)).clickAndHold()
 				.moveToElement(productCategorySlide.get(1)).release().build().perform();
+
+
+	}
+
+	public void clickOnGoToCheckoutButton() {
+		goToCheckOutButton.click();
+
 	}
 
 }
