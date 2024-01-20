@@ -1,6 +1,8 @@
 package loginProcessTests;
 
 import baseTest.Hooks;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -29,6 +31,36 @@ public class TM_LP_03 extends Hooks {
 		String errorMessage = "Please enter your password";
 		assertEquals(errorMessage, pages.getTargetMarketLoginPage().getPasswordErrorMessageText(),
 				"Error message is not" + errorMessage);
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+
 	}
 
 }

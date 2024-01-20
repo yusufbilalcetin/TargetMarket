@@ -214,7 +214,7 @@ public class TargetMarketHomePage extends BasePage {
 		for (WebElement productName : productNames) {
 			names.add(productName.getText().toLowerCase().replace('ı', 'i'));
 		}
-		return compareListEquality(names,false,false);
+		return compareListEquality(names, false, false);
 	}
 
 	public boolean isSortedZtoA() {
@@ -222,16 +222,15 @@ public class TargetMarketHomePage extends BasePage {
 		for (WebElement productName : productNames) {
 			names.add(productName.getText().toLowerCase().replace('ı', 'i'));
 		}
-		return compareListEquality(names,true,false);
+		return compareListEquality(names, true, false);
 	}
-
 
 	public boolean isSortedHighToLow() {
 		List<String> prices = new ArrayList<>();
 		for (WebElement productPrice : productPrices) {
 			prices.add(productPrice.getText().substring(1));
 		}
-		return compareListEquality(prices,true,true);
+		return compareListEquality(prices, true, true);
 
 	}
 
@@ -240,14 +239,18 @@ public class TargetMarketHomePage extends BasePage {
 		for (WebElement productPrice : productPrices) {
 			prices.add(productPrice.getText().substring(1));
 		}
-		return compareListEquality(prices,false,true);
+		return compareListEquality(prices, false, true);
 
 	}
-	public boolean compareListEquality(List<String> list,boolean isReverse,boolean isInteger){
-		List<String> newList= new ArrayList<>(list);
-		if(isInteger) Collections.sort(list, Comparator.comparingInt(Integer::parseInt));
-		else Collections.sort(newList);
-		if(isReverse) Collections.reverse(newList);
+
+	public boolean compareListEquality(List<String> list, boolean isReverse, boolean isInteger) {
+		List<String> newList = new ArrayList<>(list);
+		if (isInteger)
+			Collections.sort(list, Comparator.comparingInt(Integer::parseInt));
+		else
+			Collections.sort(newList);
+		if (isReverse)
+			Collections.reverse(newList);
 		return list.equals(newList);
 	}
 
@@ -257,7 +260,8 @@ public class TargetMarketHomePage extends BasePage {
 			for (int i = 1; i <= 50; i++) {
 				numberList.add(i);
 			}
-		} else {
+		}
+		else {
 			for (int i = 1; i <= 5; i++) {
 				if (index == 2 || index == 3)
 					numberList.add(i + 5 * (index - 2));
@@ -278,9 +282,12 @@ public class TargetMarketHomePage extends BasePage {
 
 	public void scrollCategoriesToLeft() {
 		scrollDownWithPageDown();
-		actions.moveToElement(productCategorySlide.get(4)).clickAndHold()
-				.moveToElement(productCategorySlide.get(1)).release().build().perform();
-
+		actions.moveToElement(productCategorySlide.get(4))
+			.clickAndHold()
+			.moveToElement(productCategorySlide.get(1))
+			.release()
+			.build()
+			.perform();
 
 	}
 

@@ -1,6 +1,8 @@
 package loginProcessTests;
 
 import baseTest.Hooks;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
@@ -22,6 +24,36 @@ public class TM_LP_04 extends Hooks {
 		// 3-) Verify that "Invalid username" and "Invalid password" message is displayed.
 		assertEquals("Invalid username", pages.getTargetMarketLoginPage().getErrorMessageText());
 		assertEquals("Invalid password", pages.getTargetMarketLoginPage().getPasswordErrorMessageText());
+
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
 
 	}
 

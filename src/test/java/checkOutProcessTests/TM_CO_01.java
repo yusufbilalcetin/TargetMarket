@@ -2,6 +2,8 @@ package checkOutProcessTests;
 
 import baseTest.Hooks;
 import org.assertj.core.api.Assertions;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.CheckOutPage;
@@ -99,6 +101,36 @@ public class TM_CO_01 extends Hooks {
 		// Verify that total amount is correct on Verify Screen
 		assertEquals(checkOutPage.getTotalAmountToVerify("2"),
 				checkOutPage.getVerifyOrderScreenTotalAmountText().getText());
+
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
 
 	}
 

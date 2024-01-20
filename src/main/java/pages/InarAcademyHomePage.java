@@ -16,6 +16,4 @@ public class InarAcademyHomePage extends BasePage {
 		targetMarketLink.click();
 	}
 
-
-
 }

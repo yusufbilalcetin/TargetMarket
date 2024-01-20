@@ -1,9 +1,12 @@
 package orderProcessTests.womenDressTests;
 
 import baseTest.Hooks;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
+
 // 1-) Navigate to ordering page.
 // 2-) Click on Woman Dresses category.
 //3-) Add Night Suit Dress
@@ -12,44 +15,73 @@ import pages.TargetMarketHomePage;
 // 6-) Verify that Night Suit is visible on the popup.
 // 7-) Verify that the prices are the same on the popup.
 public class TM_WD_02 extends Hooks {
-    SoftAssert softAssert = new SoftAssert();
 
-    @Test
-    void testVerifyPrice() {
+	SoftAssert softAssert = new SoftAssert();
 
-        // 1-) Navigate to ordering page.
-        pages.getInarAcademyHomePage().clickOnTargetMarketLink();
-        pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
-        wait(5);
+	@Test
+	void testVerifyPrice() {
 
-        TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
+		// 1-) Navigate to ordering page.
+		pages.getInarAcademyHomePage().clickOnTargetMarketLink();
+		pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
+		wait(5);
 
-        // 2-) Click on Woman Dresses category.
-        homePage.scrollCategoriesToLeft();
-        homePage.clickOnCategory(9);
+		TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
 
-        //3-) Add Night Suit Dress
+		// 2-) Click on Woman Dresses category.
+		homePage.scrollCategoriesToLeft();
+		homePage.clickOnCategory(9);
 
-        homePage.addToCart("NIGHT SUIT");
+		// 3-) Add Night Suit Dress
 
-        // 4-) Verify that buttons Night Suit is turned to "Added to Cart".
+		homePage.addToCart("NIGHT SUIT");
 
-        softAssert.assertEquals(homePage.getButtonText("NIGHT SUIT"), "Added to Cart",
-                "Button text does not turn to 'Added to Cart'");
+		// 4-) Verify that buttons Night Suit is turned to "Added to Cart".
 
-        // 5-) Click on cart button.
-        homePage.clickOnCartButton();
+		softAssert.assertEquals(homePage.getButtonText("NIGHT SUIT"), "Added to Cart",
+				"Button text does not turn to 'Added to Cart'");
 
-        // 6-) Verify that Night Suit is visible on the popup.
+		// 5-) Click on cart button.
+		homePage.clickOnCartButton();
 
-        softAssert.assertEquals(homePage.getProductNameOnTheCart(1), "NIGHT SUIT",
-                "Product is not added to cart");
+		// 6-) Verify that Night Suit is visible on the popup.
 
-        // 7-) Verify that the prices are the same on the popup.
-        softAssert.assertTrue(
-                homePage.getPerProductPriceOnTheCart(1).contains(homePage.getProductPrice("NIGHT SUIT")),
-                "Product price is different on the cart");
+		softAssert.assertEquals(homePage.getProductNameOnTheCart(1), "NIGHT SUIT", "Product is not added to cart");
 
+		// 7-) Verify that the prices are the same on the popup.
+		softAssert.assertTrue(homePage.getPerProductPriceOnTheCart(1).contains(homePage.getProductPrice("NIGHT SUIT")),
+				"Product price is different on the cart");
 
-    }
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+
+	}
+
 }

@@ -1,6 +1,8 @@
 package orderProcessTests.groceriesTests;
 
 import baseTest.Hooks;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
@@ -73,6 +75,36 @@ public class TM_GR_02 extends Hooks {
 				"Button text does not turn to 'Add to Cart'");
 
 		softAssert.assertAll("Groceries test 2 cannot be completed:");
+
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
 
 	}
 

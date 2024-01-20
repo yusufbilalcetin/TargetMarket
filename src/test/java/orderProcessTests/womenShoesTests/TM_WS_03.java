@@ -1,10 +1,11 @@
 package orderProcessTests.womenShoesTests;
 
 import baseTest.Hooks;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
-
 
 // 1-) Navigate to ordering page.
 // 2-) Click on Woman Shoes category.
@@ -13,34 +14,64 @@ import pages.TargetMarketHomePage;
 //5-Verify tha the discount is "%17".
 
 public class TM_WS_03 extends Hooks {
-    SoftAssert softAssert = new SoftAssert();
 
-    @Test
-    void testProcessesWomanShoes3() {
-        // 1-) Navigate to ordering page.
+	SoftAssert softAssert = new SoftAssert();
 
-        pages.getInarAcademyHomePage().clickOnTargetMarketLink();
-        pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
-        wait(5);
+	@Test
+	void testProcessesWomanShoes3() {
+		// 1-) Navigate to ordering page.
 
-        TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
+		pages.getInarAcademyHomePage().clickOnTargetMarketLink();
+		pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
+		wait(5);
 
-        // 2-) Click on Woman Shoes category.
-        homePage.scrollCategoriesToLeft();
-        homePage.clickOnCategory(10);
+		TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
 
-        //3-Add to Cart Women Shoes
-        homePage.addToCart("Women Shoes");
+		// 2-) Click on Woman Shoes category.
+		homePage.scrollCategoriesToLeft();
+		homePage.clickOnCategory(10);
 
-        // 4-) Verify that buttons Women Shoes is turned to "Added to Cart".
-        softAssert.assertEquals(homePage.getButtonText("Women Shoes"), "Added to Cart",
-                "Button text does not turn to 'Added to Cart'");
+		// 3-Add to Cart Women Shoes
+		homePage.addToCart("Women Shoes");
 
+		// 4-) Verify that buttons Women Shoes is turned to "Added to Cart".
+		softAssert.assertEquals(homePage.getButtonText("Women Shoes"), "Added to Cart",
+				"Button text does not turn to 'Added to Cart'");
 
-        //5-Verify tha the discount is "%17".
-        homePage.getDiscount("Women Shoes");
-        softAssert.assertEquals(homePage.getDiscount("Women Shoes"), "%17 OF", "Wrong discount!");
+		// 5-Verify tha the discount is "%17".
+		homePage.getDiscount("Women Shoes");
+		softAssert.assertEquals(homePage.getDiscount("Women Shoes"), "%17 OF", "Wrong discount!");
 
+	}
 
-    }
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+
+	}
+
 }

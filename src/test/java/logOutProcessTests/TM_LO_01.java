@@ -1,6 +1,8 @@
 package logOutProcessTests;
 
 import baseTest.Hooks;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -33,6 +35,36 @@ public class TM_LO_01 extends Hooks {
 	public String[][] getUserCredentials() {
 		return new String[][] { { "standard_user", "secret_password" }, { "problem_user", "secret_password" },
 				{ "performance_glitch_user", "secret_password" } };
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+
 	}
 
 }

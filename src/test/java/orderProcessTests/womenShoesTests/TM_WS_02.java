@@ -1,6 +1,8 @@
 package orderProcessTests.womenShoesTests;
 
 import baseTest.Hooks;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
@@ -15,60 +17,95 @@ import pages.TargetMarketHomePage;
 // 9-) Verify that the amount is "2" and the total price is correct.
 
 public class TM_WS_02 extends Hooks {
-    SoftAssert softAssert = new SoftAssert();
 
-    @Test
-    void testProcessesWomanShoes2() {
-        // 1-) Navigate to ordering page.
+	SoftAssert softAssert = new SoftAssert();
 
-        pages.getInarAcademyHomePage().clickOnTargetMarketLink();
-        pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
-        wait(5);
+	@Test
+	void testProcessesWomanShoes2() {
+		// 1-) Navigate to ordering page.
 
-        TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
+		pages.getInarAcademyHomePage().clickOnTargetMarketLink();
+		pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
+		wait(5);
 
-        // 2-) Click on Woman Shoes category.
-        homePage.scrollCategoriesToLeft();
-        homePage.clickOnCategory(10);
+		TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
 
-        //3-) Add Chappals & Shoe Ladies Metallic.
+		// 2-) Click on Woman Shoes category.
+		homePage.scrollCategoriesToLeft();
+		homePage.clickOnCategory(10);
 
-        homePage.addToCart("Chappals & Shoe Ladies Metallic");
+		// 3-) Add Chappals & Shoe Ladies Metallic.
 
-        // 4-) Verify that buttons Chappals & Shoe Ladies Metallic is turned to "Added to Cart".
+		homePage.addToCart("Chappals & Shoe Ladies Metallic");
 
-        softAssert.assertEquals(homePage.getButtonText("Chappals & Shoe Ladies Metallic"), "Added to Cart",
-                "Button text does not turn to 'Added to Cart'");
+		// 4-) Verify that buttons Chappals & Shoe Ladies Metallic is turned to "Added to
+		// Cart".
 
-        // 5-) Click on cart button.
-        homePage.clickOnCartButton();
+		softAssert.assertEquals(homePage.getButtonText("Chappals & Shoe Ladies Metallic"), "Added to Cart",
+				"Button text does not turn to 'Added to Cart'");
 
-        // 6-) Verify that Chappals & Shoe Ladies Metallic is visible on the popup.
+		// 5-) Click on cart button.
+		homePage.clickOnCartButton();
 
-        softAssert.assertEquals(homePage.getProductNameOnTheCart(1), "Chappals & Shoe Ladies Metallic",
-                "Product is not added to cart");
+		// 6-) Verify that Chappals & Shoe Ladies Metallic is visible on the popup.
 
-        // 7-) Verify that the prices are the same on the popup.
-        softAssert.assertTrue(
-                homePage.getPerProductPriceOnTheCart(1).contains(homePage.getProductPrice("Chappals & Shoe Ladies Metallic")),
-                "Product price is different on the cart");
+		softAssert.assertEquals(homePage.getProductNameOnTheCart(1), "Chappals & Shoe Ladies Metallic",
+				"Product is not added to cart");
 
-        // 8-) Click on "+" button to increase the amount of items.
+		// 7-) Verify that the prices are the same on the popup.
+		softAssert.assertTrue(
+				homePage.getPerProductPriceOnTheCart(1)
+					.contains(homePage.getProductPrice("Chappals & Shoe Ladies Metallic")),
+				"Product price is different on the cart");
 
-        homePage.clickOnIncreaseButtonOnCart(1, 2);
+		// 8-) Click on "+" button to increase the amount of items.
 
-        wait(2);
+		homePage.clickOnIncreaseButtonOnCart(1, 2);
 
-        // 9-) Verify that the amount is "3" and the total price is correct.
-        softAssert.assertEquals(homePage.getProductNumberOnTheCart(1), "3",
-                "Increase product amount button on the cart doesn't work");
+		wait(2);
 
-        int totalPrice2 = Integer.parseInt(homePage.getProductPrice("Chappals & Shoe Ladies Metallic").substring(1)) * 3;
+		// 9-) Verify that the amount is "3" and the total price is correct.
+		softAssert.assertEquals(homePage.getProductNumberOnTheCart(1), "3",
+				"Increase product amount button on the cart doesn't work");
 
-        softAssert.assertTrue(homePage.getTotalProductPriceOnTheCart(1).contains("$" + totalPrice2),
-                "Total price is wrong on the cart");
+		int totalPrice2 = Integer.parseInt(homePage.getProductPrice("Chappals & Shoe Ladies Metallic").substring(1))
+				* 3;
 
-        softAssert.assertAll("Furniture test 3 could not be completed: Total price is incorrect on the cart.");
+		softAssert.assertTrue(homePage.getTotalProductPriceOnTheCart(1).contains("$" + totalPrice2),
+				"Total price is wrong on the cart");
 
-    }
+		softAssert.assertAll("Furniture test 3 could not be completed: Total price is incorrect on the cart.");
+
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+
+	}
+
 }

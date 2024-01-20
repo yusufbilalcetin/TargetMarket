@@ -1,6 +1,8 @@
 package orderProcessTests.skinCareTests;
 
 import baseTest.Hooks;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.TargetMarketHomePage;
@@ -72,6 +74,36 @@ public class TM_SC_01 extends Hooks {
 				"Total price is wrong on the cart");
 
 		softAssert.assertAll("Skincare test 1 cannot be completed:");
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+
 	}
 
 }

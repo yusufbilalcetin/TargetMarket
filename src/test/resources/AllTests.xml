@@ -37,7 +37,6 @@
             <class name="orderProcessTests.womenShoesTests.TM_WS_01"/>
             <class name="orderProcessTests.womenShoesTests.TM_WS_02"/>
             <class name="orderProcessTests.womenShoesTests.TM_WS_03"/>
-
         </classes>
     </test>
     <!--<test name="Target Market All Tests - Edge">

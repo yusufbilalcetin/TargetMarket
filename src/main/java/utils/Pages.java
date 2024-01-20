@@ -15,9 +15,6 @@ public class Pages {
 
 	private TargetMarketLogOutPage targetMarketLogOutPage;
 
-
-
-
 	public Pages() {
 		inarAcademyHomePage = new InarAcademyHomePage();
 		targetMarketLoginPage = new TargetMarketLoginPage();
@@ -37,6 +34,8 @@ public class Pages {
 		return targetMarketHomePage;
 	}
 
-	public TargetMarketLogOutPage getTargetMarketLogOutPage() {return targetMarketLogOutPage;}
+	public TargetMarketLogOutPage getTargetMarketLogOutPage() {
+		return targetMarketLogOutPage;
+	}
 
 }

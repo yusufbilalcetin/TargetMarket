@@ -1,16 +1,17 @@
 package baseTest;
 
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import utils.Driver;
 import utils.Pages;
 
-public class Hooks {
+public abstract class Hooks {
 
 	protected static Pages pages;
 
 	protected SoftAssert softAssert = new SoftAssert();
-
 
 	@BeforeMethod
 	@Parameters("browserType")
@@ -32,5 +33,17 @@ public class Hooks {
 			throw new RuntimeException(e);
 		}
 	}
+
+	public abstract void onStart(ITestContext context);
+
+	public abstract void onTestStart(ITestResult result);
+
+	public abstract void onTestSuccess(ITestResult result);
+
+	public abstract void onTestFailure(ITestResult result);
+
+	public abstract void onTestSkipped(ITestResult result);
+
+	public abstract void onFinish(ITestContext context);
 
 }

@@ -1,6 +1,8 @@
 package loginProcessTests;
 
 import baseTest.Hooks;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -35,6 +37,36 @@ public class TM_LP_01 extends Hooks {
 		// 5- Verify the welcome text on the Target Market home page after login
 		String expectedWelcomeText = "Welcome to the Target Market, " + username + "!";
 		assertEquals(expectedWelcomeText, pages.getTargetMarketHomePage().getWelcomeText(), "Wrong welcome text");
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+
 	}
 
 }

@@ -70,7 +70,7 @@
                 <configuration>
                     <!-- Specific configuration for testNG-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>HomePageTests.xml</suiteXmlFile>
+                        <suiteXmlFile>OrderProcessTests.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
