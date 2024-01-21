@@ -26,6 +26,7 @@ public class TM_GR_01 extends Hooks {
 
 	@Test
 	void testGroceries() {
+
 		// 1-) Navigate to ordering page.
 		pages.getInarAcademyHomePage().clickOnTargetMarketLink();
 		pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
