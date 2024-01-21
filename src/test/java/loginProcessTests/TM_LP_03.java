@@ -1,8 +1,10 @@
 package loginProcessTests;
 
 import baseTest.Hooks;
+import listeners.ExtentReportListener;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -12,7 +14,7 @@ import static org.testng.Assert.assertTrue;
 //2- Try to Login using a valid username and by leaving the password field blank
 //3- Verify that alert message displayed
 //4- Verify that alert message is "Please enter your password"
-
+@Listeners(ExtentReportListener.class)
 public class TM_LP_03 extends Hooks {
 
 	@Test

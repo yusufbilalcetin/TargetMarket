@@ -1,8 +1,10 @@
 package orderProcessTests.furnitureTests;
 
 import baseTest.Hooks;
+import listeners.ExtentReportListener;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
@@ -16,6 +18,7 @@ import pages.TargetMarketHomePage;
  * on "+" button to increase the amount of items. 9-) Verify that the amount is "2" and
  * the total price is correct.
  */
+@Listeners(ExtentReportListener.class)
 public class TM_FU_03 extends Hooks {
 
 	SoftAssert softAssert = new SoftAssert();

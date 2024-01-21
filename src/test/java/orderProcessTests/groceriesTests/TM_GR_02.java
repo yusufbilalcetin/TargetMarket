@@ -1,8 +1,10 @@
 package orderProcessTests.groceriesTests;
 
 import baseTest.Hooks;
+import listeners.ExtentReportListener;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.TargetMarketHomePage;
@@ -19,6 +21,7 @@ import pages.TargetMarketHomePage;
 //10-) Verify that 'Your cart is empty' message
 //11-)Click close button on the cart empty message popup
 //12-)Verify that button in Orange Essence Food Flavou card is turned to "Add to Cart".
+@Listeners(ExtentReportListener.class)
 public class TM_GR_02 extends Hooks {
 
 	SoftAssert softAssert = new SoftAssert();

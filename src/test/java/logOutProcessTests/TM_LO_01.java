@@ -1,13 +1,15 @@
 package logOutProcessTests;
 
 import baseTest.Hooks;
+import listeners.ExtentReportListener;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
-
+@Listeners(ExtentReportListener.class)
 public class TM_LO_01 extends Hooks {
 
 	// Test method using a DataProvider to run multiple test cases with different users

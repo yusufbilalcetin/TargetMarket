@@ -1,8 +1,10 @@
 package loginProcessTests;
 
 import baseTest.Hooks;
+import listeners.ExtentReportListener;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -12,6 +14,7 @@ import static org.testng.Assert.assertTrue;
 //2- Try to Login using the locked out username
 //3- Verify that locked user can not login
 //4- Verify that "Your account is locked." text appears
+@Listeners(ExtentReportListener.class)
 public class TM_LP_02 extends Hooks {
 
 	@Test

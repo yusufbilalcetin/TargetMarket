@@ -1,9 +1,11 @@
 package loginProcessTests;
 
 import baseTest.Hooks;
+import listeners.ExtentReportListener;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -13,7 +15,7 @@ import static org.testng.Assert.assertEquals;
 //3- Click on the Target Market link on the Inar Academy home page
 //4- Login using the provided username and password(Login method calls clickLogin())
 //5- Verify the welcome text on the Target Market home page after login
-
+@Listeners(ExtentReportListener.class)
 public class TM_LP_01 extends Hooks {
 
 	// 1- Create a DataProvider method to provide different user credentials for the test
@@ -28,6 +30,7 @@ public class TM_LP_01 extends Hooks {
 	@Test(dataProvider = "userCredentials")
 	public void testLoginProcessWithDifferentUsers(String username, String password) {
 		// 3- Click on the Target Market link on the Inar Academy home page
+
 		pages.getInarAcademyHomePage().clickOnTargetMarketLink();
 
 		// 4- Login using the provided username and password(Login method calls

@@ -1,8 +1,10 @@
 package orderProcessTests.groceriesTests;
 
 import baseTest.Hooks;
+import listeners.ExtentReportListener;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -17,7 +19,7 @@ import pages.TargetMarketHomePage;
 // 7-) Verify that the price is the same on the popup.
 // 8-) Click on four times "+" button to increase the amount of item.
 // 9-) Verify that the amount is "5" and the total price is correct.
-
+@Listeners(ExtentReportListener.class)
 public class TM_GR_01 extends Hooks {
 
 	SoftAssert softAssert = new SoftAssert();

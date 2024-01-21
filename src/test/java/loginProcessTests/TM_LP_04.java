@@ -1,8 +1,10 @@
 package loginProcessTests;
 
 import baseTest.Hooks;
+import listeners.ExtentReportListener;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
@@ -10,7 +12,7 @@ import static org.testng.AssertJUnit.assertEquals;
 // 1-)Open the URL.
 // 2-) Enter "InvalidUserName" as username and "anything" as password.
 // 3-) Verify that "Invalid username" and "Invalid password" message is displayed.
-
+@Listeners(ExtentReportListener.class)
 public class TM_LP_04 extends Hooks {
 
 	@Test
