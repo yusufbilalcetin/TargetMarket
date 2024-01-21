@@ -1,6 +1,7 @@
 package orderProcessTests.skinCareTests;
 
 import baseTest.Hooks;
+import listeners.ExtentReportListener;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
@@ -28,44 +29,56 @@ public class TM_SC_01 extends Hooks {
 
 	@Test(dataProvider = "products")
 	void testSkinCareOrderingMultiple(String product, String price, String discount) {
+		try{
 		// 1-) Navigate to ordering page.
-		pages.getInarAcademyHomePage().clickOnTargetMarketLink();
+			ExtentReportListener.getTest().info("1-) Navigate to ordering page.");
+
+			pages.getInarAcademyHomePage().clickOnTargetMarketLink();
 		pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
 
 		TargetMarketHomePage homePage = pages.getTargetMarketHomePage();
 
 		// 2-) Click on Laptops category.
-		homePage.clickOnCategory(4);
+			ExtentReportListener.getTest().info(" 2-) Click on Laptops category.");
+			homePage.clickOnCategory(4);
 
 		// 3-) Verify each product's discount is correct
-		softAssert.assertEquals(homePage.getDiscount(product), discount,
+			ExtentReportListener.getTest().info("3-) Verify each product's discount is correct");
+			softAssert.assertEquals(homePage.getDiscount(product), discount,
 				"Discount rate is not correct for the " + product);
 
 		// 4-) Add each skincare product to cart.
-		homePage.addToCart(product);
+			ExtentReportListener.getTest().info("4-) Add each skincare product to cart.");
+			homePage.addToCart(product);
 
 		// 5-) Verify that button in the related card is tunred to "Added to Cart".
-		softAssert.assertEquals(homePage.getButtonText(product), "Added to Cart",
+			ExtentReportListener.getTest().info("5-) Verify that button in the related card is tunred to \"Added to Cart\".");
+			softAssert.assertEquals(homePage.getButtonText(product), "Added to Cart",
 				"Button text doesn't turn to 'Added to Cart' for " + product);
 
 		// 6-) Click on cart button.
-		homePage.clickOnCartButton();
+			ExtentReportListener.getTest().info("6-) Click on cart button.");
+			homePage.clickOnCartButton();
 
 		// 7-) Verify that the product is visible on the popup.
-		wait(2);
+			ExtentReportListener.getTest().info("7-) Verify that the product is visible on the popup.");
+			wait(2);
 		softAssert.assertEquals(homePage.getProductNameOnTheCart(1), product, product + " is not added to the cart");
 		;
 
 		// 8-) Verify that its price is the same on the popup.
-		softAssert.assertTrue(homePage.getPerProductPriceOnTheCart(1).contains(price),
+			ExtentReportListener.getTest().info("8-) Verify that its price is the same on the popup.");
+			softAssert.assertTrue(homePage.getPerProductPriceOnTheCart(1).contains(price),
 				product + " price is different on the cart");
 
 		// 9-) Click on "+" button twice to increase the amount of item to 3.
-		wait(2);
+			ExtentReportListener.getTest().info("9-) Click on \"+\" button twice to increase the amount of item to 3.");
+			wait(2);
 		homePage.clickOnIncreaseButtonOnCart(1, 2);
 
 		// 10-) Verify that the amount is "3" and the total price is correct.
-		wait(2);
+			ExtentReportListener.getTest().info(" 10-) Verify that the amount is \"3\" and the total price is correct.");
+			wait(2);
 		softAssert.assertEquals(homePage.getProductNumberOnTheCart(1), "3",
 				"Increase product amount button on the cart doesn't work");
 
@@ -74,6 +87,11 @@ public class TM_SC_01 extends Hooks {
 				"Total price is wrong on the cart");
 
 		softAssert.assertAll("Skincare test 1 cannot be completed:");
+		ExtentReportListener.getTest().pass("Test passed");
+	}catch (Exception e) {
+			// If any exception occurs, report the test as failed
+			ExtentReportListener.getTest().fail("Test failed");
+		}
 	}
 
 	@Override
