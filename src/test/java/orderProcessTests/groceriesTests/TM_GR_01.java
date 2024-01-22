@@ -46,7 +46,8 @@ public class TM_GR_01 extends Hooks {
 			homePage.addToCart("Elbow Macaroni - 400 gm");
 
 			// 4-) Verify that button in Elbow Macaroni card is turned to "Added to Cart".
-			ExtentReportListener.getTest().info(" 4-) Verify that button in Elbow Macaroni card is turned to \"Added to Cart\".");
+			ExtentReportListener.getTest()
+				.info(" 4-) Verify that button in Elbow Macaroni card is turned to \"Added to Cart\".");
 			softAssert.assertEquals(homePage.getButtonText("Elbow Macaroni - 400 gm"), "Added to Cart",
 					"Button text does not turn to 'Added to Cart'");
 
@@ -62,11 +63,13 @@ public class TM_GR_01 extends Hooks {
 			// 7-) Verify that the price is the same on the popup.
 			ExtentReportListener.getTest().info(" 7-) Verify that the price is the same on the popup.");
 			softAssert.assertTrue(
-					homePage.getPerProductPriceOnTheCart(1).contains(homePage.getProductPrice("Elbow Macaroni - 400 gm")),
+					homePage.getPerProductPriceOnTheCart(1)
+						.contains(homePage.getProductPrice("Elbow Macaroni - 400 gm")),
 					"Product price is different on the cart");
 
 			// 8-) Click on four times "+" button to increase the amount of item.
-			ExtentReportListener.getTest().info(" 8-) Click on four times \"+\" button to increase the amount of item.");
+			ExtentReportListener.getTest()
+				.info(" 8-) Click on four times \"+\" button to increase the amount of item.");
 			homePage.clickOnIncreaseButtonOnCart(1, 4);
 			wait(2);
 
@@ -81,7 +84,8 @@ public class TM_GR_01 extends Hooks {
 
 			softAssert.assertAll("Groceries test 1 cannot be completed:");
 			ExtentReportListener.getTest().pass("Test passed");
-		}catch (Exception e) {
+		}
+		catch (Exception e) {
 			// If any exception occurs, report the test as failed
 			ExtentReportListener.getTest().fail("Test failed");
 		}

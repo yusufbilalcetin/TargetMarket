@@ -9,6 +9,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
+
 @Listeners(ExtentReportListener.class)
 public class TM_LO_01 extends Hooks {
 

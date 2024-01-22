@@ -17,7 +17,6 @@ public class ExtentReportListener implements ITestListener {
 		extent.attachReporter(new ExtentSparkReporter("extent.html"));
 	}
 
-
 	public static ExtentTest getTest() {
 		return test;
 	}
@@ -35,8 +34,8 @@ public class ExtentReportListener implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("Test passed");
 		test.pass("Test passed");
+		System.out.println("Test passed");
 	}
 
 	@Override

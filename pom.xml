@@ -70,7 +70,7 @@
                 <configuration>
                     <!-- Specific configuration for testNG-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>OrderProcessTests.xml</suiteXmlFile>
+                        <suiteXmlFile>orderProcessTests.furnitureTests.TM_FU_01</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
